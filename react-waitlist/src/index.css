@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background: radial-gradient(circle at top right, #fdfbfb 0%, #ebedee 100%);
+  min-height: 100vh;
+}
+
+.button-3d {
+  transition: all 0.1s ease;
+  box-shadow: 0 6px 0px 0px rgba(0,0,0,0.2);
+}
+.button-3d:active {
+  transform: translateY(6px);
+  box-shadow: 0 0px 0px 0px rgba(0,0,0,0.2);
+}
