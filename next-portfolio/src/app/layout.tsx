@@ -20,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex gap-8 font-black uppercase text-xl">
               <Link href="/projects" className="hover:underline decoration-4 underline-offset-8">Work</Link>
               <Link href="/about" className="hover:underline decoration-4 underline-offset-8">About</Link>
+              <Link href="/blog" className="hover:underline decoration-4 underline-offset-8">Blog</Link>
               <Link href="/contact" className="hover:underline decoration-4 underline-offset-8">Contact</Link>
             </div>
           </div>

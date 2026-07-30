@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
@@ -68,15 +68,46 @@ function Status() {
   );
 }
 
+function Product() {
+  return (
+    <div className="p-10 md:p-16 text-center animate-in fade-in duration-500">
+      <h1 className="text-3xl font-black mb-4 text-gray-900">Features</h1>
+      <p className="text-gray-500 font-medium leading-relaxed">Our product offers advanced AI integrations, real-time collaboration, and a 10x faster workflow to help you design faster than ever before.</p>
+    </div>
+  );
+}
+
+function FAQ() {
+  return (
+    <div className="p-10 md:p-16 text-left animate-in slide-in-from-bottom-4 duration-500">
+      <h1 className="text-3xl font-black mb-8 text-gray-900">FAQ</h1>
+      <div className="mb-6"><h3 className="font-bold text-lg mb-2">When is launch?</h3><p className="text-gray-500">Q4 2026. Invites go out weekly.</p></div>
+      <div className="mb-6"><h3 className="font-bold text-lg mb-2">Is it free?</h3><p className="text-gray-500">The beta is completely free.</p></div>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex items-center justify-center p-4">
+      <div className="min-h-screen flex flex-col items-center justify-center p-4">
+        
+        {/* Global Navigation for all 5 Waitlist Pages */}
+        <nav className="mb-8 flex gap-4 bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">
+           <Link to="/" className="text-sm font-bold text-gray-500 hover:text-gray-900">Home</Link>
+           <Link to="/survey" className="text-sm font-bold text-gray-500 hover:text-gray-900">Survey</Link>
+           <Link to="/status" className="text-sm font-bold text-gray-500 hover:text-gray-900">Status</Link>
+           <Link to="/product" className="text-sm font-bold text-gray-500 hover:text-gray-900">Product</Link>
+           <Link to="/faq" className="text-sm font-bold text-gray-500 hover:text-gray-900">FAQ</Link>
+        </nav>
+
         <div className="w-full max-w-md bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100 relative">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/survey" element={<Survey />} />
             <Route path="/status" element={<Status />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/faq" element={<FAQ />} />
           </Routes>
         </div>
       </div>
