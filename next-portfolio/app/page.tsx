@@ -4,7 +4,12 @@ export default function Portfolio() {
     <main className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
       <nav className="p-8 flex justify-between items-center border-b-4 border-black">
         <h1 className="text-3xl font-black tracking-tighter uppercase">Dev.Port</h1>
-        <a href="#" className="font-bold border-2 border-black px-6 py-2 hover:bg-black hover:text-white transition-colors">Contact</a>
+        <div className="flex gap-4 items-center">
+          <a href="/about" className="font-bold border-2 border-black px-6 py-2 hover:bg-black hover:text-white transition-colors">About</a>
+          <a href="/projects" className="font-bold border-2 border-black px-6 py-2 hover:bg-black hover:text-white transition-colors">Projects</a>
+          <a href="/blog" className="font-bold border-2 border-black px-6 py-2 hover:bg-black hover:text-white transition-colors">Blog</a>
+          <a href="/contact" className="font-bold border-2 border-black px-6 py-2 hover:bg-black hover:text-white transition-colors">Contact</a>
+        </div>
       </nav>
       <section className="p-8 md:p-24 border-b-4 border-black">
         <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none mb-8">I build<br/>interfaces.</h2>
