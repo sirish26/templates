@@ -15,7 +15,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${inter.className} min-h-screen antialiased selection:bg-[#ff4400] selection:text-white`}>
         <SiteNav />
-        <main className="pt-24">
+        <main className="pt-40 sm:pt-36 lg:pt-24">
           {children}
         </main>
       </body>
