@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --primary: #3b82f6;
+  --primary-glow: rgba(59, 130, 246, 0.5);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  background-image: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+
+.glass-panel {
+  background: rgba(25, 25, 25, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glow-button {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.glow-button::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  background: var(--primary);
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+.glow-button:hover::before { opacity: 0.6; }
