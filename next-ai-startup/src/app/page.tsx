@@ -29,6 +29,40 @@ export default function Home() {
           View Demo
         </Link>
       </div>
+
+      {/* Template Navigation Cards */}
+      <div className="w-full max-w-6xl mt-32 z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-4">Explore the Template</h2>
+          <p className="text-white/60">Fully built-out pages ready for your application.</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Link href="/dashboard" className="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all hover:-translate-y-1 group">
+            <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Sparkles size={24} className="text-blue-400" />
+            </div>
+            <span className="font-bold">Dashboard</span>
+          </Link>
+          <Link href="/shop" className="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all hover:-translate-y-1 group">
+            <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Sparkles size={24} className="text-purple-400" />
+            </div>
+            <span className="font-bold">E-Commerce</span>
+          </Link>
+          <Link href="/pricing" className="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all hover:-translate-y-1 group">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Sparkles size={24} className="text-emerald-400" />
+            </div>
+            <span className="font-bold">Pricing Plans</span>
+          </Link>
+          <Link href="/login" className="glass-panel p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-white/10 transition-all hover:-translate-y-1 group">
+            <div className="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Shield size={24} className="text-orange-400" />
+            </div>
+            <span className="font-bold">Auth Flow</span>
+          </Link>
+        </div>
+      </div>
       
       {/* Feature Grid */}
       <div className="grid md:grid-cols-3 gap-6 mt-32 max-w-6xl w-full">
