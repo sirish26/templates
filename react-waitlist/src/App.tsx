@@ -125,7 +125,7 @@ export default function App() {
            <Link to="/faq" className="text-sm font-medium text-white/60 hover:text-white hover:bg-white/10 px-4 py-2 rounded-full transition-all">FAQ</Link>
         </nav>
 
-        <div className="w-full max-w-md bg-black/40 rounded-[40px] shadow-[0_0_100px_rgba(0,0,0,0.5)] overflow-hidden border border-white/10 relative backdrop-blur-2xl">
+        <div className="w-full max-w-5xl bg-black/40 rounded-[40px] shadow-[0_0_100px_rgba(0,0,0,0.5)] overflow-hidden border border-white/10 relative backdrop-blur-2xl">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/survey" element={<Survey />} />
