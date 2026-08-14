@@ -2,10 +2,10 @@
   import { page } from '$app/stores';
   
   // Format slug to readable title
-  $: title = $page.params.slug
+  let title = $derived($page.params.slug
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .join(' '));
 </script>
 
 <svelte:head>
